@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/study_signup"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/signup_image"
+        android:src="@drawable/study_signup" />
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/study_signup"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="25dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/text_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textSize="45sp"
+            android:textStyle="italic|bold" />
+
+        <TableLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_reg"
+            android:layout_centerHorizontal="true">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/emailId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="username"
+                    android:ems="10"
+                    android:hint="@string/enter_email_address"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#8D6E63"
+                    tools:ignore="VisualLintBounds" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile" />
+
+                <EditText
+                    android:id="@+id/mobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="username"
+                    android:ems="10"
+                    android:hint="@string/enter_mobile_number"
+                    android:inputType="phone"
+                    android:textColorHint="#8D6E63"
+                    tools:ignore="VisualLintBounds" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/userTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Usr" />
+
+                <EditText
+                    android:id="@+id/Usr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="username"
+                    android:ems="10"
+                    android:hint="@string/enter_new_username"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#8D6E63"
+                    tools:ignore="VisualLintBounds" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/newPasswordTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/newPwd" />
+
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="password"
+                    android:ems="10"
+                    android:hint="@string/enter_new_password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#8D6E63"
+                    tools:ignore="VisualLintBounds" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/conPasswordTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conPwd" />
+
+                <EditText
+                    android:id="@+id/conPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="password"
+                    android:ems="10"
+                    android:hint="@string/confirm_the_password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#8D6E63"
+                    tools:ignore="VisualLintBounds" />
+            </TableRow>
+
+            <RelativeLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/newUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/newUser"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/registerTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/already_have_an_account" />
+
+                    <Button
+                        android:id="@+id/login"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/login"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </RelativeLayout>
+        </TableLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

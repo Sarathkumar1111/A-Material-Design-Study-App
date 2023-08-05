@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/study_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/login_image"
+        android:src="@drawable/study_login"
+        android:layout_above="@+id/rl1"/>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/text_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_login"
+            android:textAlignment="center"
+            android:textSize="45sp"
+            android:textStyle="italic|bold" />
+
+        <TableLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_login"
+            android:layout_centerHorizontal="true"
+            tools:ignore="TextSizeCheck">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/emailId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="emailAddress"
+                    android:ems="10"
+                    android:hint="@string/enter_your_email_address"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#8D6E63" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/passwordTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pwd" />
+
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:autofillHints="password"
+                    android:ems="10"
+                    android:hint="@string/enter_the_password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#8D6E63" />
+            </TableRow>
+
+            <RelativeLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <Button
+                    android:id="@+id/fp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login"
+                    android:layout_marginStart="170dp"
+                    android:text="@string/fp"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/registerTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/don_t_have_an_account" />
+
+                    <Button
+                        android:id="@+id/signup"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/signup"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </RelativeLayout>
+        </TableLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
